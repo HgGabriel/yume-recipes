@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
   return (
     <div className={styles.footer}>
       <img src="/logo.jpg" alt="" />
-      <p>&copy; 2021 Yume Recipes. Todos os Direitos reservados</p>
+      <p>&copy; 2021 Yume Recipesa. Todos os Direitos reservados</p>
       <div className={styles.social}>
         <a href="https://www.github.com" target="_blank" rel="noreferrer">
           <i className="bi-github"></i>
