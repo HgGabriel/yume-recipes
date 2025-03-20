@@ -1,0 +1,18 @@
+.trendingContainer {
+    padding: 2rem;
+
+    .mainTrendingCard {
+        display: flex;
+
+        img {
+            width: 700px;
+        }
+
+        .mainTrendingCardInfo {
+            position: absolute;
+            h2 {
+
+            }
+        }
+    }
+}

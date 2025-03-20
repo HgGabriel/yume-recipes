@@ -1,3 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+
 .mySwiper {
-  
+    .slide {
+        height: 600px;
+        width: 100%;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: flex;
+
+        .slideContent {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 30%;
+            padding: 2rem;
+            background-color: #0a0a0a;
+            h2 {
+                font-size: 2.5rem;
+                font-weight: 300;
+                color: #fff;
+            }
+            img {
+                max-width: 180px;
+                transform: translateY(-20px);
+            }
+            p {
+                font-size: 1.25rem;
+                color: #fff;
+                margin-bottom: 1rem;
+                font-weight: 400;
+            }
+            a {
+                display: inline-block;
+                padding: 1rem 2rem;
+                color: #D84040;
+                font-size: 25px;
+                font-weight: 700;
+                margin-left: auto;
+                margin-top: auto;
+                text-transform: uppercase;
+                border-radius: 5px;
+                font-family: 'Jockey One', sans-serif;
+                opacity: 0.8;
+                transition: opacity 0.3s ease;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+        }
+
+        .slideImage {
+            width: 70%;
+            background-color: rgba(0, 0, 0, 0.767);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            object-fit: cover;
+        }
+    }
 }
