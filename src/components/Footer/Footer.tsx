@@ -10,6 +10,7 @@ const Footer: React.FC = () => {
         <a href="https://www.github.com" target="_blank" rel="noreferrer">
           <i className="bi-github"></i>
           <p>@HgGabriel</p>
+          
         </a>
         <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
           <i className="bi-linkedin"></i>

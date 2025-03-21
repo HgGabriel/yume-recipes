@@ -1,0 +1,52 @@
+.ingredientIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    transition: border 0.5s ease;
+
+    &:hover {
+      border: 2px solid #d84040;
+    }
+  }
+
+  span {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 10px;
+    font-weight: 700;
+  }
+}
+
+.ingredientsContainer {
+  .ingredients {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 50px;
+
+  }
+  .ingredients > *:first-child {
+    grid-column-start: 2;
+  }
+}
+
+
+@media screen and (max-width: 1550px) {
+  .ingredientsContainer {
+    .ingredients > *:first-child {
+      grid-column-start: 1;
+    }
+  }
+  
+}

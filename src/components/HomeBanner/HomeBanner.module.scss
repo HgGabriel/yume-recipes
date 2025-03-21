@@ -1,63 +1,175 @@
 @import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
 
 .mySwiper {
-    .slide {
-        height: 600px;
-        width: 100%;
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        display: flex;
+  width: 100%;
+  height: 100%;
 
-        .slideContent {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            width: 30%;
-            padding: 2rem;
-            background-color: #0a0a0a;
-            h2 {
-                font-size: 2.5rem;
-                font-weight: 300;
-                color: #fff;
-            }
-            img {
-                max-width: 180px;
-                transform: translateY(-20px);
-            }
-            p {
-                font-size: 1.25rem;
-                color: #fff;
-                margin-bottom: 1rem;
-                font-weight: 400;
-            }
-            a {
-                display: inline-block;
-                padding: 1rem 2rem;
-                color: #D84040;
-                font-size: 25px;
-                font-weight: 700;
-                margin-left: auto;
-                margin-top: auto;
-                text-transform: uppercase;
-                border-radius: 5px;
-                font-family: 'Jockey One', sans-serif;
-                opacity: 0.8;
-                transition: opacity 0.3s ease;
-                &:hover {
-                    opacity: 1;
-                }
-            }
+  .slide {
+    height: 500px; // Altura padrão para desktop
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
 
+    .slideContent {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 30%;
+      padding: 2rem;
+      background-color: #0a0a0a;
+
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 300;
+        color: #fff;
+      }
+
+      img {
+        max-width: 180px;
+        transform: translateY(-20px);
+      }
+
+      p {
+        font-size: 1.25rem;
+        color: #fff;
+        margin-bottom: 1rem;
+        font-weight: 400;
+      }
+
+      a {
+        display: inline-block;
+        padding: 1rem 2rem;
+        color: #D84040;
+        font-size: 25px;
+        font-weight: 700;
+        margin-left: auto;
+        margin-top: auto;
+        text-transform: uppercase;
+        border-radius: 5px;
+        font-family: 'Jockey One', sans-serif;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+          opacity: 1;
         }
-
-        .slideImage {
-            width: 70%;
-            background-color: rgba(0, 0, 0, 0.767);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            object-fit: cover;
-        }
+      }
     }
+
+    .slideImage {
+      width: 70%;
+      background-color: rgba(0, 0, 0, 0.767);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      object-fit: cover;
+    }
+  }
+}
+
+// Media Queries para Responsividade
+@media (max-width: 1024px) {
+  .mySwiper {
+    .slide {
+      height: 500px; // Reduz a altura para tablets
+
+      .slideContent {
+        width: 40%; // Aumenta a largura do conteúdo para melhor legibilidade
+
+        h2 {
+          font-size: 2rem; // Reduz o tamanho da fonte
+        }
+
+        p {
+          font-size: 1rem;
+        }
+
+        a {
+          font-size: 20px;
+          padding: 0.8rem 1.5rem;
+        }
+      }
+
+      .slideImage {
+        width: 60%; // Reduz a largura da imagem
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .mySwiper {
+    .slide {
+      height: 400px; // Reduz a altura para dispositivos móveis
+      flex-direction: column; // Muda para layout de coluna única
+
+      .slideContent {
+        width: 100%; // Ocupa toda a largura
+        padding: 1.5rem; // Reduz o padding
+        text-align: center; // Centraliza o conteúdo
+
+        h2 {
+          font-size: 1.8rem;
+        }
+
+        img {
+          max-width: 140px; // Reduz o tamanho da imagem de rating
+          transform: translateY(-10px);
+        }
+
+        p {
+          font-size: 0.9rem;
+        }
+
+        a {
+          font-size: 18px;
+          padding: 0.6rem 1.2rem;
+          margin: 1rem auto 0; // Centraliza o botão
+        }
+      }
+
+      .slideImage {
+        width: 100%; // Ocupa toda a largura
+        height: 200px; // Define uma altura fixa para a imagem
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .mySwiper {
+    .slide {
+      height: 350px; // Altura menor para telas muito pequenas
+
+      .slideContent {
+        padding: 1rem;
+        position: absolute;
+        background-color: #0a0a0a9d;
+        align-items: center;
+
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        img {
+          max-width: 120px;
+        }
+
+        p {
+          font-size: 0.8rem;
+        }
+
+        a {
+          font-size: 16px;
+          padding: 0.5rem 1rem;
+        }
+      }
+
+      .slideImage {
+        height: 100%;
+      }
+    }
+  }
 }
