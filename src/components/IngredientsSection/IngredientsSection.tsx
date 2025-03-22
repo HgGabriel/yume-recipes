@@ -30,7 +30,6 @@ const IngredientIcon: React.FC<IngredientIconProps> = ({ name, imageUrl }) => {
 const IngredientsSection: React.FC = () => {
 
   const isDesktop = window.innerWidth > 768;
-  const isMobile = window.innerWidth <= 768;
 
   return (
     <div style={{ padding: "20px", marginTop: "20px" }}>
