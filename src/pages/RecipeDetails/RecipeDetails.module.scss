@@ -1,0 +1,157 @@
+.recipeDetails {
+  padding: 40px;
+
+  .recipeInfo {
+    display: flex;
+    gap: 20px;
+
+    .recipeDetailsCard {
+      display: flex;
+      gap: 20px;
+      border: 2px solid #afafaf;
+      padding: 20px;
+      border-radius: 10px;
+      width: 60%;
+      background-color: rgba(0, 0, 0, 0.7);
+
+      .recipeDetailsCardLeft {
+        .recipeDetailsCardImage {
+          position: relative;
+          display: flex;
+
+          img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid #afafaf;
+          }
+
+          i {
+            margin: 10px;
+            font-size: 20px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: #fff;
+            cursor: pointer;
+
+            &:hover {
+              color: #f00;
+            }
+          }
+        }
+
+        h2 {
+          font-size: 1.5rem;
+          font-weight: 300;
+          color: #fff;
+          margin-top: 20px;
+        }
+
+        .recipeDetailsRating {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+
+          img {
+            margin-top: -10px;
+            width: 100px;
+          }
+
+          p {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #fff;
+          }
+        }
+      }
+
+      .recipeDetailsCardRight {
+        p {
+          font-size: 16px;
+          font-weight: 300;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .ingredients {
+    background-color: #1d1d1d;
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 0.5rem;
+
+        &:before {
+          content: "- ";
+        }
+      }
+    }
+  }
+
+  .recipeSteps {
+    margin-top: 2rem;
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .stepAccordion {
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+      padding: 1rem;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+      margin-bottom: 0.5rem;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: #444;
+      }
+
+      &.active {
+        background-color: #555;
+      }
+    }
+
+    .stepPanel {
+      background-color: #222;
+      color: #fff;
+      padding: 0 1rem;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      border-radius: 5px;
+
+      p {
+        margin: 1rem 0;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+    }
+  }
+}
