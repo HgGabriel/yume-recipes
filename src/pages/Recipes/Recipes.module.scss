@@ -10,7 +10,7 @@
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  background-color: #1a1a1a; // Fundo escuro para contraste
+  background-color: #1a1a1a;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 
@@ -141,7 +141,6 @@
   }
 }
 
-// Media Queries para Responsividade
 @media (max-width: 768px) {
   .recipeCard {
     height: 320px;

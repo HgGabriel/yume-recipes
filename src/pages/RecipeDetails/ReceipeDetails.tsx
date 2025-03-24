@@ -8,7 +8,7 @@ const RecipeDetails: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [isFavorite, setIsFavorite] = useState(false);
-  const [activeStepIds, setActiveStepIds] = useState<number[]>([]); // Array de IDs dos passos ativos
+  const [activeStepIds, setActiveStepIds] = useState<number[]>([]); 
   const id = location.pathname.split("/").pop();
 
   useEffect(() => {
@@ -24,8 +24,8 @@ const RecipeDetails: React.FC = () => {
   const toggleStep = (stepId: number) => {
     setActiveStepIds((prevIds) =>
       prevIds.includes(stepId)
-        ? prevIds.filter((id) => id !== stepId) // Remove o ID se já estiver ativo
-        : [...prevIds, stepId] // Adiciona o ID se não estiver ativo
+        ? prevIds.filter((id) => id !== stepId) 
+        : [...prevIds, stepId] 
     );
   };
 

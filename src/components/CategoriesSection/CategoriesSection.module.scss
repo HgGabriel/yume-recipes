@@ -1,6 +1,6 @@
 .categoriesContainer {
   padding: 2rem;
-  text-align: center; // Centraliza o título
+  text-align: center;
 
   h1 {
     font-size: 2.5rem;
@@ -10,9 +10,8 @@
 
   .categories {
     display: flex;
-    flex-wrap: wrap; // Permite que os cards quebrem para a próxima linha
+    flex-wrap: wrap;
     justify-content: center;
-    // gap: 1.5rem; // Espaçamento entre os cards
   }
 }
 
@@ -23,7 +22,6 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  // border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   background-color: black;
@@ -44,7 +42,7 @@
 
   img {
     width: 100%;
-    max-width: 280px; // Limita o tamanho máximo da imagem
+    max-width: 280px;
     height: 250px;
     object-fit: cover;
     transition: opacity 0.3s ease;
@@ -64,7 +62,6 @@
   }
 }
 
-// Media Queries para Responsividade
 @media (max-width: 768px) {
   .categoriesContainer {
     padding: 1rem;
@@ -73,34 +70,29 @@
       font-size: 2rem;
     }
 
-    .categories {
-      // gap: 1rem; // Comentado para manter o espaçamento padrão
-    }
-
     .categoryCard {
       img {
         height: 200px;
-        width: 300px; // Limita o tamanho máximo da imagem
+        width: 300px;
       }
 
       span {
         font-size: 1.2rem;
-        opacity: 1; // Mantém o texto visível
-        transform: translateY(0); // Remove a animação de deslocamento
+        opacity: 1;
+        transform: translateY(0); 
       }
 
-      // Desabilita o efeito de hover
       &:hover {
         transform: none;
         box-shadow: none;
 
         img {
-          opacity: 1; // Mantém a opacidade original da imagem
+          opacity: 1;
         }
 
         span {
-          opacity: 1; // Mantém o texto visível
-          transform: translateY(0); // Remove a animação de deslocamento
+          opacity: 1;
+          transform: translateY(0);
         }
       }
     }
@@ -114,7 +106,7 @@
     }
 
     .categories {
-      gap: 0.8rem; // Comentado para manter o espaçamento padrão
+      gap: 0.8rem;
     }
 
     .categoryCard {
@@ -126,8 +118,8 @@
 
       span {
         font-size: 1rem;
-        opacity: 1; // Mantém o texto visível
-        transform: translateY(0); // Remove a animação de deslocamento
+        opacity: 1;
+        transform: translateY(0);
         background-color: rgba(0, 0, 0, 0.555);
         width: 100%;
         height: 50px;
@@ -137,18 +129,17 @@
         left: 0rem;
       }
 
-      // Desabilita o efeito de hover
       &:hover {
         transform: none;
         box-shadow: none;
 
         img {
-          opacity: 1; // Mantém a opacidade original da imagem
+          opacity: 1; 
         }
 
         span {
-          opacity: 1; // Mantém o texto visível
-          transform: translateY(0); // Remove a animação de deslocamento
+          opacity: 1; 
+          transform: translateY(0);
         }
       }
     }

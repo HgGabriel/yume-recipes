@@ -2,14 +2,13 @@
   display: flex;
 
   gap: 2rem;
-  // background-color: #f5f5f5; // Fundo claro para contraste
   border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); // Sombra suave
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
 
   h1 {
     font-size: 2.5rem;
     font-weight: 600;
-    color: #333; // Cor escura para o título
+    color: #333; 
     text-align: center;
     margin-bottom: 1rem;
   }
@@ -22,14 +21,14 @@
     .mainTrendingCard {
       position: relative;
 
-      height: 500px; // Ou min-height: 400px;
+      height: 500px; 
 
       width: 100%;
       background-size: cover;
       background-position: center;
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); // Sombra para destaque
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 
       &::before {
         content: "";
@@ -42,7 +41,7 @@
           to top,
           rgba(0, 0, 0, 0.8),
           rgba(0, 0, 0, 0.3)
-        ); // Gradiente para melhorar a legibilidade
+        ); 
       }
 
       .mainTrendingCardInfo {
@@ -104,13 +103,12 @@
       }
 
       &.trendingCardSelected {
-        border: 3px solid #ff6b6b; // Borda destacada para o card selecionado
+        border: 3px solid #ff6b6b; 
       }
     }
   }
 }
 
-// Media Queries para Responsividade
 @media (max-width: 768px) {
   .trendingContainer {
     padding: 1rem;

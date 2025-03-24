@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import styles from  './HeaderNav.module.scss'; // Assuming you have some CSS for styling
+import styles from  './HeaderNav.module.scss'; 
 
 const HeaderNav: React.FC = () => {
   return (
