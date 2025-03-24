@@ -8,7 +8,7 @@ const RecipeDetails: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [isFavorite, setIsFavorite] = useState(false);
-  const [activeStepIds, setActiveStepIds] = useState<number[]>([]); 
+  const [activeStepIds, setActiveStepIds] = useState<number[]>([]);
   const id = location.pathname.split("/").pop();
 
   useEffect(() => {
@@ -24,8 +24,8 @@ const RecipeDetails: React.FC = () => {
   const toggleStep = (stepId: number) => {
     setActiveStepIds((prevIds) =>
       prevIds.includes(stepId)
-        ? prevIds.filter((id) => id !== stepId) 
-        : [...prevIds, stepId] 
+        ? prevIds.filter((id) => id !== stepId)
+        : [...prevIds, stepId]
     );
   };
 
@@ -81,11 +81,7 @@ const RecipeDetails: React.FC = () => {
                 >
                   <span>{step.stepNumber}</span>
                   {step.title}
-                  {activeStepIds.includes(step.id) ? (
-                    <i className="bi bi-chevron-up"></i>
-                  ) : (
-                    <i className="bi bi-chevron-down"></i>
-                  )}
+                  <i className="bi bi-chevron-up"></i>
                 </button>
                 <div
                   className={styles.stepPanel}
