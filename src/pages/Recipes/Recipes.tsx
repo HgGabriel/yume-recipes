@@ -3,14 +3,7 @@ import styles from "./Recipes.module.scss";
 import { mockData } from "../../../public/mockData";
 import { Recipe } from "../../types/recipe";
 import { Link } from "react-router-dom";
-
-const clipText = (text: string, maxLength: number) => {
-  if (text.length > maxLength) {
-    return text.substring(0, maxLength) + "...";
-  }
-  return text;
-};
-
+import { clipText } from "../../utils/clipText";
 //regex para pegar os ingredientes e tirar medidas como 1/2 xícara, 150g, remove numeros tambem e simbolos
 const cleanIngredients = (ingredients: string[]): string[] => {
   // Padrão para remover quantidades, unidades (simples e compostas) e "de"

@@ -8,7 +8,7 @@ const RecipeDetails: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [isFavorite, setIsFavorite] = useState(false);
-  const [activeStepIndex, setActiveStepIndex] = useState<number | null>(null); // Estado para o accordion
+  const [activeStepIds, setActiveStepIds] = useState<number[]>([]); // Array de IDs dos passos ativos
   const id = location.pathname.split("/").pop();
 
   useEffect(() => {
@@ -21,8 +21,12 @@ const RecipeDetails: React.FC = () => {
     setIsLoading(false);
   }, [id]);
 
-  const toggleStep = (index: number) => {
-    setActiveStepIndex(activeStepIndex === index ? null : index);
+  const toggleStep = (stepId: number) => {
+    setActiveStepIds((prevIds) =>
+      prevIds.includes(stepId)
+        ? prevIds.filter((id) => id !== stepId) // Remove o ID se já estiver ativo
+        : [...prevIds, stepId] // Adiciona o ID se não estiver ativo
+    );
   };
 
   return (
@@ -67,20 +71,26 @@ const RecipeDetails: React.FC = () => {
           </div>
           <div className={styles.recipeSteps}>
             <h1>Modo de Preparo</h1>
-            {recipe.steps.map((step, index) => (
-              <div key={index}>
+            {recipe.steps.map((step) => (
+              <div key={step.id}>
                 <button
                   className={`${styles.stepAccordion} ${
-                    activeStepIndex === index ? styles.active : ""
+                    activeStepIds.includes(step.id) ? styles.active : ""
                   }`}
-                  onClick={() => toggleStep(index)}
+                  onClick={() => toggleStep(step.id)}
                 >
+                  <span>{step.stepNumber}</span>
                   {step.title}
+                  {activeStepIds.includes(step.id) ? (
+                    <i className="bi bi-chevron-up"></i>
+                  ) : (
+                    <i className="bi bi-chevron-down"></i>
+                  )}
                 </button>
                 <div
                   className={styles.stepPanel}
                   style={{
-                    maxHeight: activeStepIndex === index ? "500px" : "0",
+                    maxHeight: activeStepIds.includes(step.id) ? "500px" : "0",
                     overflow: "hidden",
                     transition: "max-height 0.3s ease-out",
                   }}

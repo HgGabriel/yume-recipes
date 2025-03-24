@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./HomeBanner.module.scss";
 import "swiper/swiper-bundle.css";
 import { mockData } from "../../../public/mockData";
+import { clipText } from "../../utils/clipText";
 
 
 const HomeBanner: React.FC = () => {
@@ -29,7 +30,7 @@ const HomeBanner: React.FC = () => {
               <div className={styles.slideContent}>
                 <h2>{slide.title}</h2>
                 <img src="https://cdn.pixabay.com/photo/2022/01/11/12/16/rating-6930474_1280.png" alt="rating" className={styles.rating} />
-                <p>{slide.description}</p>
+                <p>{clipText(slide.description, 350)}</p>
                 <a>Mais Detalhes</a>
               </div>
               <img src={slide.imageH} alt={slide.title} className={styles.slideImage} />
