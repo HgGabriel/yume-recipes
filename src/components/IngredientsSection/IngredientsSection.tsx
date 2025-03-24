@@ -45,7 +45,7 @@ const IngredientsSection: React.FC = () => {
               navigation
               modules={[Navigation, Autoplay]}
             >
-              { isDesktop && ingredientList.slice(0, 8).map((ingredient, index) => (
+              {isDesktop && ingredientList.slice(0, 8).map((ingredient, index) => (
                 <SwiperSlide key={index}>
                   <IngredientIcon name={ingredient.name} imageUrl={ingredient.imageUrl} />
                 </SwiperSlide>
