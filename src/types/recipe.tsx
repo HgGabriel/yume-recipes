@@ -14,4 +14,5 @@ export type Recipe = {
   tags: string[];
   ingredients: string[];
   steps: Step[];
+  rating: number;
 };

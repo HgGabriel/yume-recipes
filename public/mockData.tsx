@@ -8,7 +8,21 @@ export const mockData: Recipe[] = [
     imageH: "https://images.unsplash.com/photo-1617196905100-216ffe128142?q=80&w=1164&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageV: "https://images.unsplash.com/photo-1615361200098-9e630ec29b4e?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     tags: ["tag1", "tag2"],
-    ingredients: ["ingredient1", "ingredient2"],
+    ingredients: [
+    "200g de macarrão para yakissoba",
+    "150g de peito de frango em tiras",
+    "1 cenoura em rodelas finas",
+    "1/2 pimentão vermelho em tiras",
+    "1/2 pimentão verde em tiras",
+    "1 xícara de brócolis",
+    "1/2 cebola fatiada",
+    "2 colheres de sopa de molho de soja (shoyu)",
+    "1 colher de sopa de óleo de gergelim",
+    "1 colher de chá de açúcar",
+    "1 dente de alho picado",
+    "1 colher de sopa de amido de milho dissolvido em água",
+    "Sal e pimenta a gosto"
+  ],
     steps: [
       {
         id: 1,
@@ -22,7 +36,8 @@ export const mockData: Recipe[] = [
         title: "Step 2",
         description: "Description 2",
       },
-    ]
+    ],
+    rating: 4.5
   },
   {
     id: 2,
@@ -45,7 +60,8 @@ export const mockData: Recipe[] = [
         title: "Step 2",
         description: "Description 2",
       },
-    ]
+    ],
+    rating: 4.5
   },
   {
     id: 3,
@@ -68,7 +84,8 @@ export const mockData: Recipe[] = [
         title: "Step 2",
         description: "Description 2",
       },
-    ]
+    ],
+    rating: 4.5
   }, 
   {
     id: 4,
@@ -91,7 +108,8 @@ export const mockData: Recipe[] = [
         title: "Step 2",
         description: "Description 2",
       },
-    ]
+    ],
+    rating: 4.5
   },
   {
     id: 5,
@@ -114,7 +132,8 @@ export const mockData: Recipe[] = [
         title: "Step 2",
         description: "Description 2",
       },
-    ]
+    ],
+    rating: 4.5
   },
   {
     id: 6,
@@ -137,6 +156,7 @@ export const mockData: Recipe[] = [
         title: "Step 2",
         description: "Description 2",
       },
-    ]
+    ],
+    rating: 4.5
   }
 ]
