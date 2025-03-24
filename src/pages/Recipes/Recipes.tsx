@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Recipes.module.scss";
 import { mockData } from "../../../public/mockData";
 import { Recipe } from "../../types/recipe";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { clipText } from "../../utils/clipText";
 //regex para pegar os ingredientes e tirar medidas como 1/2 xícara, 150g, remove numeros tambem e simbolos
 const cleanIngredients = (ingredients: string[]): string[] => {
@@ -26,8 +26,10 @@ const randomizeIngredients = (ingredients: string[]): string[] => {
 
 const RecipeCard: React.FC<{
   recipe: Recipe;
-}> = ({ recipe }) => (
-  <div className={styles.recipeCard}>
+}> = ({ recipe }) => {
+  const navigate = useNavigate();
+  return (
+  <div className={styles.recipeCard} onClick={() => navigate(`/recipe/${recipe.id}`)}>
     <div className={styles.recipeCardTop}>
       <div className={styles.recipeImage}>
         <img src={recipe.imageV} alt={recipe.title} />
@@ -66,9 +68,11 @@ const RecipeCard: React.FC<{
       <p>Mais detalhes</p>
     </Link>
   </div>
-);
+  )
+}
 
 const Recipes: React.FC = () => {
+  
   return (
     <div className={styles.recipesContainer}>
       <h1>Busque por receitas:</h1>
