@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./TrendingSection.module.scss";
 import { mockData } from "../../../public/mockData";
 import { Recipe } from "../../types/recipe";
+import { useNavigate } from "react-router-dom";
 
 const TrendingSection: React.FC = () => {
   const [selectedId, setSelectedId] = useState<number>(2);
@@ -20,16 +21,17 @@ const TrendingSection: React.FC = () => {
     return <div>Carregando...</div>;
   }
 
+
   return (
     <>
       <div style={{ padding: "20px", marginTop: "20px" }}>
         <h1 style={{marginBottom:"20px"}}>Destaques</h1>
         <div className={styles.trendingContainer}>
           <div className={styles.trending}>
-            <MainTrendingCard item={selectedItem} />
+            <MainTrendingCard item={selectedItem}  />
           </div>
           <div className={styles.trendingCards}>
-            {mockData.slice(0, 6).map((item) => (
+            {mockData.slice(6, 12).map((item) => (
               <TrendingCard
                 key={item.id}
                 item={item}
@@ -44,10 +46,13 @@ const TrendingSection: React.FC = () => {
   );
 };
 
-const MainTrendingCard: React.FC<{ item: Recipe }> = ({ item }) => (
+const MainTrendingCard: React.FC<{ item: Recipe }> = ({ item }) => {
+  const navigate = useNavigate();
+  return(
   <div
     className={styles.mainTrendingCard}
-    style={{ backgroundImage: `url(${item.imageH})` }}
+    style={{ backgroundImage: `url(${item.imageH})`, cursor: "pointer" }}
+    onClick={() => navigate(`/recipe/${item.id}`)}
   >
     <div className={styles.mainTrendingCardInfo}>
       <div>
@@ -61,7 +66,7 @@ const MainTrendingCard: React.FC<{ item: Recipe }> = ({ item }) => (
       <p>{item.description}</p>
     </div>
   </div>
-);
+)}
 
 const TrendingCard: React.FC<{
   item: Recipe;

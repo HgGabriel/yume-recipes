@@ -38,7 +38,7 @@ const RecipeCard: React.FC<{
         />
       </div>
       <div>
-        <span>{recipe.title}</span>
+        <span>{clipText(recipe.title,18)}</span>
         <p>{clipText(recipe.description, 200)}</p>
       </div>
     </div>

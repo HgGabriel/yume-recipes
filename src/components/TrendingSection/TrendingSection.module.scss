@@ -29,6 +29,7 @@
       border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      border: 2px solid #696969;
 
       &::before {
         content: "";
@@ -42,6 +43,10 @@
           rgba(0, 0, 0, 0.8),
           rgba(0, 0, 0, 0.3)
         ); 
+      }
+
+      &:hover {
+        
       }
 
       .mainTrendingCardInfo {

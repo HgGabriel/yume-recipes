@@ -114,7 +114,7 @@ export const mockData: Recipe[] = [
   },
   {
     id: 3,
-    title: "Mochi de Morango (Ichigo Daifuku)",
+    title: "Mochi de Morango",
     imageH:
       "https://foodisafourletterword.com/wp-content/uploads/2021/04/Strawberry_Mochi_Recipe_for_Instant_Pot_or_Steamer.jpg",
     imageV:
@@ -214,7 +214,7 @@ export const mockData: Recipe[] = [
   },
   {
     id: 5,
-    title: "Hiyashi Chuka - Macarrão Gelado de Verão",
+    title: "Hiyashi Chuka",
     imageH:
       "https://www.seriouseats.com/thmb/bLULeUCLpIQqdULWbjmxuG3oWeI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2015__06__20150529-cold-ramen-hiyashi-chuka-shao-zhong-4-899b239879484c05bff9139b0f1cd88c.jpg",
     imageV:
@@ -269,7 +269,7 @@ export const mockData: Recipe[] = [
   },
   {
     id: 6,
-    title: "Sakura Mochi - Doce de Primavera",
+    title: "Sakura Mochi",
     imageH:
       "https://www3.nhk.or.jp/nhkworld/en/radio/cooking/update/meal_130301_l.jpg",
     imageV:
@@ -320,7 +320,7 @@ export const mockData: Recipe[] = [
   },
   {
     id: 7,
-    title: "Oden - Especialidade de Outono",
+    title: "Oden",
     imageH: "https://sabores-new.s3.amazonaws.com/public/2024/11/oden.jpg",
     imageV: "https://www.edibleseattle.com/wp-content/uploads/2024/12/oden-recipe.jpg",
     description:
@@ -373,7 +373,7 @@ export const mockData: Recipe[] = [
   },
   {
     id: 8,
-    title: "Yakitori (Espetinho Japonês)",
+    title: "Yakitori",
     imageH: "https://i.ytimg.com/vi/VVxXbCa2ljg/maxresdefault.jpg",
     imageV: "https://www.receiteria.com.br/wp-content/uploads/espetinho-japones-de-frango.jpg",
     description:
@@ -415,7 +415,7 @@ export const mockData: Recipe[] = [
   },
   {
     id: 9,
-    title: "Kaki Fry - Ostras Empanadas de Inverno",
+    title: "Kaki Fry",
     imageH: "https://www3.nhk.or.jp/nhkworld/en/radio/cooking/update/meal_200228_l.jpg",
     imageV: "https://www.justonecookbook.com/wp-content/uploads/2021/04/Japanese-Fried-Oysters-Kaki-Fry-2118.jpg",
     description:
@@ -466,7 +466,7 @@ export const mockData: Recipe[] = [
   },
   {
     id: 10,
-    title: "Dango de Três Cores - Hanami de Primavera",
+    title: "Dango de Três Cores",
     imageH: "https://escolaeducacao.com.br/wp-content/uploads/2022/07/Hanami-Dango.jpg",
     imageV: "https://previews.123rf.com/images/jreika/jreika1309/jreika130900176/22499818-confeitaria-japonesa-tr%C3%AAs-cores-mochi-dango-com-flor-no-fundo.jpg",
     description:
@@ -517,7 +517,7 @@ export const mockData: Recipe[] = [
   },
   {
     id: 11,
-    title: "Hamo no Sakamushi de Verão",
+    title: "Hamo no Sakamushi",
     imageH: "https://bebeloveokazu.wordpress.com/wp-content/uploads/2011/05/img_5560.jpg",
     imageV: "https://bebeloveokazu.wordpress.com/wp-content/uploads/2011/05/img_5560.jpg",
     description:
@@ -567,7 +567,7 @@ export const mockData: Recipe[] = [
   },
   {
     id: 12,
-    title: "Sanma no Shioyaki - Cavalinha de Outono",
+    title: "Sanma no Shioyaki ",
     imageH: "https://www.justonecookbook.com/wp-content/uploads/2012/10/Grilled-Sanma-III.jpg",
     imageV: "https://www.justonecookbook.com/wp-content/uploads/2024/07/image.jpeg",
     description:
@@ -615,7 +615,7 @@ export const mockData: Recipe[] = [
   },
   {
     id: 13,
-    title: "Nabe de Cogumelos de Outono",
+    title: "Nabe de Cogumelos",
     imageH: "https://gogonihon.com/wp-content/uploads/2023/11/Japanese-hot-pot-izakaya.jpg",
     imageV: "https://preview.redd.it/f0df59hvpolb1.png?auto=webp&s=68720948bb6daf3570e5ad1aea951fed3d3e5757",
     description:
