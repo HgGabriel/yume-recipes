@@ -37,12 +37,14 @@ const RecipeDetails: React.FC = () => {
     }
   };
 
+  
+
   useEffect(() => {
     const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
     if (favorites.includes(Number(id))) {
       setIsFavorite(true);
     }
-  }, []);
+  }, [id]);
 
   useEffect(() => {
     const recipe = mockData.find((recipe: Recipe) => recipe.id === Number(id));
