@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import styles from "./Recipes.module.scss";
+import styles from "./RecipesFiltered.module.scss";
 import { mockData } from "../../../public/mockData";
 import { Recipe } from "../../types/recipe";
 import { Link, useNavigate } from "react-router-dom";
@@ -61,30 +61,28 @@ const RecipeCard: React.FC<{
   );
 };
 
-const Recipes: React.FC = () => {
-  const [search, setSearch] = React.useState("");
+const RecipesFiltered: React.FC = () => {
+  const search = window.location.pathname.split("/")[2];
   const [filteredRecipes, setFilteredRecipes] = React.useState<Recipe[]>([]);
 
   useEffect(() => {
     setFilteredRecipes(
       mockData.filter((recipe) =>
         recipe.title.toLowerCase().includes(search.toLowerCase()) ||
-        recipe.tags.some((tag) => tag.toLowerCase().includes(search.toLowerCase())) ||
+        recipe.tags.some((tag) => tag.toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .includes(search.toLowerCase()
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, ""))) ||
         recipe.ingredients.some((ingredient) => ingredient.toLowerCase().includes(search.toLowerCase()))
       )
     );
+    console.log(search)
   }, [search]);
 
   return (
     <div className={styles.recipesContainer}>
-      <h1>Busque por receitas:</h1>
-      <input
-        type="text"
-        className=""
-        placeholder="Pesquisar receitas"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
       <div className={styles.recipes}>
         {filteredRecipes.map((recipe) => (
           <RecipeCard key={recipe.id} recipe={recipe} />
@@ -94,4 +92,4 @@ const Recipes: React.FC = () => {
   );
 };
 
-export default Recipes;
+export default RecipesFiltered;

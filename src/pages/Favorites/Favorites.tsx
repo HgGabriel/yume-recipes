@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import styles from "./Recipes.module.scss";
+import styles from "./Favorites.module.scss";
 import { mockData } from "../../../public/mockData";
 import { Recipe } from "../../types/recipe";
 import { Link, useNavigate } from "react-router-dom";
@@ -61,32 +61,16 @@ const RecipeCard: React.FC<{
   );
 };
 
-const Recipes: React.FC = () => {
-  const [search, setSearch] = React.useState("");
-  const [filteredRecipes, setFilteredRecipes] = React.useState<Recipe[]>([]);
-
-  useEffect(() => {
-    setFilteredRecipes(
-      mockData.filter((recipe) =>
-        recipe.title.toLowerCase().includes(search.toLowerCase()) ||
-        recipe.tags.some((tag) => tag.toLowerCase().includes(search.toLowerCase())) ||
-        recipe.ingredients.some((ingredient) => ingredient.toLowerCase().includes(search.toLowerCase()))
-      )
-    );
-  }, [search]);
+const Favorites: React.FC = () => {
+  const favorites = localStorage.getItem("favorites") || "[]";
+  const favoritesArray = JSON.parse(favorites);
+  const data = mockData.filter((recipe) => favoritesArray.includes(recipe.id));
+  
 
   return (
     <div className={styles.recipesContainer}>
-      <h1>Busque por receitas:</h1>
-      <input
-        type="text"
-        className=""
-        placeholder="Pesquisar receitas"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
       <div className={styles.recipes}>
-        {filteredRecipes.map((recipe) => (
+        {data.map((recipe) => (
           <RecipeCard key={recipe.id} recipe={recipe} />
         ))}
       </div>
@@ -94,4 +78,4 @@ const Recipes: React.FC = () => {
   );
 };
 
-export default Recipes;
+export default Favorites;

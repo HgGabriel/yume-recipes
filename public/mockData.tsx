@@ -665,3 +665,5 @@ export const mockData: Recipe[] = [
     rating: 4.5,
   },
 ];
+
+export const mockIngredients = mockData.map((recipe) => recipe.ingredients);

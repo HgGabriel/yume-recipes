@@ -11,6 +11,39 @@ const RecipeDetails: React.FC = () => {
   const [activeStepIds, setActiveStepIds] = useState<number[]>([]);
   const id = location.pathname.split("/").pop();
 
+  const handleAddToFavorites = (id: number) => {
+    const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+    if (!favorites.includes(id)) {
+      favorites.push(id);
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+      setIsFavorite(true);
+    }
+  };
+
+  const handleRemoveFromFavorites = (id: number) => {
+    const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+    const updatedFavorites = favorites.filter(
+      (favoriteId: number) => favoriteId !== id
+    );
+    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+    setIsFavorite(false);
+  };
+
+  const handleToggleFavorite = (id: number) => {
+    if (isFavorite) {
+      handleRemoveFromFavorites(id);
+    } else {
+      handleAddToFavorites(id);
+    }
+  };
+
+  useEffect(() => {
+    const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+    if (favorites.includes(Number(id))) {
+      setIsFavorite(true);
+    }
+  }, []);
+
   useEffect(() => {
     const recipe = mockData.find((recipe: Recipe) => recipe.id === Number(id));
     if (recipe) {
@@ -42,7 +75,7 @@ const RecipeDetails: React.FC = () => {
                   <img src={recipe.imageV} alt={recipe.title} />
                   <i
                     className={`bi bi-suit-heart${isFavorite ? "-fill" : ""}`}
-                    onClick={() => setIsFavorite(!isFavorite)}
+                    onClick={() => handleToggleFavorite(recipe.id)}
                     style={{ cursor: "pointer" }}
                   ></i>
                 </div>
